@@ -1,3 +1,17 @@
+# STICKERIZE
+
+Prepare images before giving them to the telegram Sticker bot.
+
+There are 3 requirements that must be fulfilled before an image can be used to create a sticker :
+
+* Format has to be PNG
+* File size <= 350kb
+* Width and height <= 512px
+
+Stickerize automates the tedious process of making multiple images fit these requirements
+
+============================================================================
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
