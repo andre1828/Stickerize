@@ -1,6 +1,6 @@
 import React from "react"
 import "./App.css"
-import Service from "./Service.js"
+import Service from "./Service/Service"
 
 class App extends React.Component {
   constructor(props) {
