@@ -1,1 +1,150 @@
+body {
+  background-color: #d9cbef80;
+  animation: 0.5s ease-in fade-in;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*Title*/
+h3 {
+  text-align: center;
+  font-weight: 900;
+  font-size: x-large;
+}
 
+/*Select images button*/
+label[for="imageInput"] {
+  display: block;
+  width: 80%;
+  max-width: 256px;
+  height: 230px;
+  background-color: #500fcccc;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 16px;
+  box-shadow: 0 9px 15px #440ab1b3;
+  text-align: center;
+  line-height: 2;
+  cursor: pointer;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+label[for="imageInput"]:hover {
+  box-shadow: 0 18px 20px #440ab1b3;
+}
+
+.picture-icon {
+  color: #e4d3f3cc;
+  font-size: 7em;
+  margin-left: 0px;
+}
+
+.picture-icon::before {
+  font-family: Flaticon;
+  content: "\f1ec";
+}
+
+/*select imagens button text*/
+label[for="imageInput"] p {
+  color: #e4d3f3cc;
+  font-weight: bold;
+  position: relative;
+  bottom: 66px;
+}
+
+.imageList {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.imageList .image {
+  display: flex;
+  /* background-color: #ede8f5; */
+  height: 120px;
+  width: 90%;
+  margin: 0 auto;
+  /* border: 1px #ede8f5 solid;
+  border-radius: 5px; */
+}
+
+.imageList .image img {
+  width: 60px;
+  padding: 30px 0px 5px 15px;
+  align-self: baseline;
+}
+
+.devider-vertical {
+  height: 90px;
+  background-color: #c4bdce;
+  width: 1px;
+  position: relative;
+  top: 13%;
+  left: 5%;
+}
+
+.image-name {
+  padding: 10px 0px 0px 30px;
+  width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 3.5;
+}
+
+.image-remove-icon::before {
+  font-family: Flaticon;
+  content: "\f1c5";
+  line-height: 8;
+}
+
+.devider {
+  background-color: #c6c6c6;
+  height: 1px;
+  width: 80%;
+  margin: 70px auto 10px auto;
+}
+
+.feature-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature {
+  display: block;
+  width: 80%;
+  height: 230px;
+  margin: 30px auto 0px auto;
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 5em;
+}
+
+.layers::before {
+  font-family: Flaticon;
+  content: "\f1a2";
+}
+
+.stop-watch-4::before {
+  font-family: Flaticon;
+  content: "\f240";
+}
+
+footer {
+  text-align: center;
+  font-weight: lighter;
+}
+
+footer a {
+  color: #500fcccc;
+  text-decoration: none;
+}
