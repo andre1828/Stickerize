@@ -14,7 +14,7 @@ class App extends React.Component {
     this.state = {
       images: [],
       stickerizedImages: [],
-      finalFile: "",
+      finalFile: ""
     }
   }
 
@@ -43,26 +43,10 @@ class App extends React.Component {
       <div className="App">
         <h3>STICKERIZE</h3>
         <section className="main-section">
-          {!this.state.images.length ? (
-            <label htmlFor="imageInput">
-              <div className="picture-icon" />
-              <p>SELECT IMAGES</p>
-            </label>
-          ) : (
-            <div className="imageList">
-              {this.state.images.map((img, index) => (
-                <div className="image">
-                  <img src={require("./dont_panic.png")} alt=" " />
-                  <div className="devider-vertical" />
-                  <span className="image-name">dont panic.png</span>
-                  <div
-                    className="image-remove-icon"
-                    onClick={() => this.handleRemoveButtonClicked(index)}
-                  />
-                </div>
-              ))}
-            </div>
-          )}
+          <label htmlFor="imageInput">
+            <div className="picture-icon" />
+            <p>SELECT IMAGES</p>
+          </label>
         </section>
         <div className="devider" />
         <section className="feature-container">
