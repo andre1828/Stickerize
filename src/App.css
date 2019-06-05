@@ -1,6 +1,6 @@
 body {
   background-color: #d9cbef80;
-  animation: 0.5s ease-in fade-in;
+  animation: 0.3s ease-in fade-in;
 }
 @keyframes fade-in {
   0% {
@@ -28,7 +28,7 @@ label[for="imageInput"] {
   margin-left: auto;
   margin-right: auto;
   border-radius: 16px;
-  box-shadow: 0 9px 15px #440ab1b3;
+  box-shadow: 0 5px 15px -5px #440ab1b3;
   text-align: center;
   line-height: 2;
   cursor: pointer;
@@ -36,7 +36,7 @@ label[for="imageInput"] {
 }
 
 label[for="imageInput"]:hover {
-  box-shadow: 0 18px 20px #440ab1b3;
+  box-shadow: 0 10px 30px -10px #440ab1b3;
 }
 
 .picture-icon {
