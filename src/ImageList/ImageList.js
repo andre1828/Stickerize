@@ -25,7 +25,8 @@ class ImageList extends React.Component {
       let blob = await new Response(files[i]).blob()
       images.push({
         name: files[i].name,
-        src: URL.createObjectURL(blob)
+        src: URL.createObjectURL(blob),
+        blob: blob
       })
     }
     this.setState({ images: images })
@@ -39,7 +40,9 @@ class ImageList extends React.Component {
     this.setState({ images: this.state.images.filter((_, i) => i !== index) })
   }
 
-  async stickerizeAll() {
+  async handleStickerizeButtonClicked() {
+    this.state.images.forEach(img => URL.revokeObjectURL(img.url))
+
     this.setState({
       finalFile: await this.service.stickerizeAll(this.state.images)
     })
@@ -62,7 +65,12 @@ class ImageList extends React.Component {
             </div>
           ))}
         </div>
-        <button className={"stickerize-button"}>STICKERIZE!</button>
+        <button
+          className={"stickerize-button"}
+          onClick={() => this.handleStickerizeButtonClicked()}
+        >
+          STICKERIZE!
+        </button>
       </React.Fragment>
     )
   }
