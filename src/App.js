@@ -1,43 +1,20 @@
 import React from "react"
 import "./App.css"
 import "./flaticon.css"
-import Service from "./Service/Service"
 
 class App extends React.Component {
   constructor(props) {
     super()
-    this.service = new Service()
-    this.canvas = document.createElement("canvas")
-    this.ctx = this.canvas.getContext("2d")
-    this.imageContainer = new Image()
-    this.fileReader = new FileReader()
+
     this.state = {
-      images: [],
-      stickerizedImages: [],
-      finalFile: ""
+      stickerizedImages: []
     }
   }
 
-  handleFilePickerChanged(files) {
-    this.setState({
-      images: [...this.state.images, ...files],
-      mainSectionContent: "imagesList"
-    })
+  async handleFilePickerChanged(files) {
+    this.props.history.push({ pathname: "/images", state: { files } })
   }
 
-  handleDownloadButtonClicked() {
-    window.location = this.state.finalFile
-  }
-
-  handleRemoveButtonClicked(index) {
-    this.setState({ images: this.state.images.filter((_, i) => i !== index) })
-  }
-
-  async stickerizeAll() {
-    this.setState({
-      finalFile: await this.service.stickerizeAll(this.state.images)
-    })
-  }
   render() {
     return (
       <div className="App">
