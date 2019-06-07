@@ -8,26 +8,22 @@ export default class Service {
 
     this.stickerizeAll = this.stickerizeAll.bind(this)
   }
-
+  
   async stickerizeAll(images) {
     var stickerizedImages = []
     for (const image of images) {
-      var imgBlob = await new Response(image).blob()
-      var objUrl = URL.createObjectURL(imgBlob)
-      this.imageContainer.src = objUrl
+      this.imageContainer.src = image.src
       await this.loadImage()
       this.resizeImage()
       if (this.compressionRequired()) {
-        stickerizedImages.push(await this.compressImgBlob(imgBlob))
+        stickerizedImages.push(await this.compressImgBlob(image.blob))
       } else {
         stickerizedImages.push(await this.canvasToBlob())
       }
     }
-
+    
     var result = ""
     if (stickerizedImages.length > 1) {
-      // zip
-      // render download btn
       var imagesZip = new JSZip()
       for (let i = 0; i < images.length; i++) {
         imagesZip.file(images[i].name, stickerizedImages[i])
@@ -36,16 +32,16 @@ export default class Service {
       result = "data:application/zip;base64," + b64Zip
     } else {
       result =
-        "data:application/png;base64," +
-        (await this.blobToBase64(stickerizedImages[0])).replace(
-          "data:image/jpeg;base64,",
-          ""
+      "data:application/png;base64," +
+      (await this.blobToBase64(stickerizedImages[0])).replace(
+        "data:image/jpeg;base64,",
+        ""
         )
+      }
+      return result
     }
-    return result
-  }
-
-  loadImage() {
+    
+    loadImage() {
     return new Promise((resolve, reject) => {
       this.imageContainer.onload = () => {
         this.canvas.width = this.imageContainer.width
