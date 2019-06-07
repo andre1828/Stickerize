@@ -1,0 +1,10 @@
+.stickerize-button {
+  width: 100%;
+  background: #6634c5;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  border-style: none;
+  font-weight: bolder;
+  box-shadow: 0px -10px 40px -10px #440ab1b3;
+}

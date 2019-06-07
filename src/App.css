@@ -4,7 +4,7 @@ body {
 }
 @keyframes fade-in {
   0% {
-    opacity: 0.25;
+    opacity: 0;
   }
   100% {
     opacity: 1;
@@ -28,7 +28,7 @@ label[for="imageInput"] {
   margin-left: auto;
   margin-right: auto;
   border-radius: 16px;
-  box-shadow: 0 5px 15px -5px #440ab1b3;
+  /* box-shadow: 0 5px 15px -5px #440ab1b3; */
   text-align: center;
   line-height: 2;
   cursor: pointer;
@@ -63,26 +63,27 @@ label[for="imageInput"] p {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  padding-bottom: 50px;
 }
 
 .imageList .image {
   display: flex;
   /* background-color: #ede8f5; */
-  height: 120px;
-  width: 90%;
+  height: 160px;
+  width: 98%;
   margin: 0 auto;
   /* border: 1px #ede8f5 solid;
   border-radius: 5px; */
 }
 
 .imageList .image img {
-  width: 60px;
-  padding: 30px 0px 5px 15px;
+  width: 120px;
+  padding: 35px 0px 5px 15px;
   align-self: baseline;
 }
 
 .devider-vertical {
-  height: 90px;
+  height: 120px;
   background-color: #c4bdce;
   width: 1px;
   position: relative;
@@ -91,7 +92,7 @@ label[for="imageInput"] p {
 }
 
 .image-name {
-  padding: 10px 0px 0px 30px;
+  padding: 16px 0px 0px 36px;
   width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
