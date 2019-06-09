@@ -1,7 +1,7 @@
 import React from "react"
 import uuidv1 from "uuid/v1"
 import Service from "./../Service/Service"
-import { withRouter } from "react-router-dom"
+import { withRouter, Link } from "react-router-dom"
 import "./ImageList.css"
 
 class ImageList extends React.Component {
@@ -15,7 +15,7 @@ class ImageList extends React.Component {
     this.fileReader = new FileReader()
     this.state = {
       images: [],
-      finalFile: "",
+      finalFile: ""
     }
   }
 
@@ -41,21 +41,27 @@ class ImageList extends React.Component {
   }
 
   handleRemoveButtonClicked(id) {
-    this.setState({ images: this.state.images.filter((img) => img.id !== id) })
+    this.setState({ images: this.state.images.filter(img => img.id !== id) })
   }
 
   async handleStickerizeButtonClicked() {
     this.state.images.forEach(img => URL.revokeObjectURL(img.url))
 
     this.setState({
-      finalFile: await this.service.stickerizeAll(this.state.images),
+      finalFile: await this.service.stickerizeAll(this.state.images)
     })
   }
 
   render() {
     return (
       <React.Fragment>
-        <h3>YOUR IMAGES</h3>
+        <div className="header">
+          <Link to="/">
+          <i className="home-icon" />
+          </Link>
+          <h3>YOUR IMAGES</h3>
+          <i className="add-image-icon" onClick={this.handleAddImageButtonClicked}/>
+        </div>
         <div className="imageList">
           {this.state.images.map((img, index) => (
             <div className="image" key={img.id}>
