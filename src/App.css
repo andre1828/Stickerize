@@ -28,7 +28,6 @@ label[for="imageInput"] {
   margin-left: auto;
   margin-right: auto;
   border-radius: 16px;
-  /* box-shadow: 0 5px 15px -5px #440ab1b3; */
   text-align: center;
   line-height: 2;
   cursor: pointer;
@@ -68,42 +67,37 @@ label[for="imageInput"] p {
 
 .imageList .image {
   display: flex;
-  /* background-color: #ede8f5; */
   height: 160px;
   width: 98%;
-  margin: 0 auto;
-  /* border: 1px #ede8f5 solid;
-  border-radius: 5px; */
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .imageList .image img {
-  width: 120px;
-  padding: 35px 0px 5px 15px;
-  align-self: baseline;
+  width: 165px;
+  max-height: 93px;
 }
 
 .devider-vertical {
   height: 120px;
   background-color: #c4bdce;
   width: 1px;
-  position: relative;
-  top: 13%;
-  left: 5%;
 }
 
 .image-name {
-  padding: 16px 0px 0px 36px;
+  padding-top: 36px;
   width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  line-height: 3.5;
+  align-self: baseline;
 }
 
 .image-remove-icon::before {
   font-family: Flaticon;
   content: "\f1c5";
-  line-height: 8;
+  color: #8e8b93;
+  font-style: normal;
 }
 
 .devider {
