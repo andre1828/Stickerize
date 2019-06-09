@@ -57,6 +57,26 @@ label[for="imageInput"] p {
   bottom: 66px;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.home-icon::before {
+  font-family: Flaticon;
+  content: "\f18e";
+  color: #8e8b93;
+  font-style: normal;
+  font-weight: bold;
+}
+.add-image-icon::before {
+  font-family: Flaticon;
+  content: "\f100";
+  color: #8e8b93;
+  font-style: normal;
+  font-weight: bold;
+}
+
 .imageList {
   height: max-content;
   display: flex;
