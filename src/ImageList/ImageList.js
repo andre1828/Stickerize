@@ -1,4 +1,5 @@
 import React from "react"
+import uuidv1 from "uuid/v1"
 import Service from "./../Service/Service"
 import { withRouter } from "react-router-dom"
 import "./ImageList.css"
@@ -14,7 +15,7 @@ class ImageList extends React.Component {
     this.fileReader = new FileReader()
     this.state = {
       images: [],
-      finalFile: ""
+      finalFile: "",
     }
   }
 
@@ -24,11 +25,14 @@ class ImageList extends React.Component {
     for (let i = 0; i < files.length; i++) {
       let blob = await new Response(files[i]).blob()
       images.push({
+        id: null,
         name: files[i].name,
         src: URL.createObjectURL(blob),
         blob: blob
       })
     }
+    images.forEach(img => (img.id = uuidv1()))
+
     this.setState({ images: images })
   }
 
@@ -36,15 +40,15 @@ class ImageList extends React.Component {
     window.location = this.state.finalFile
   }
 
-  handleRemoveButtonClicked(index) {
-    this.setState({ images: this.state.images.filter((_, i) => i !== index) })
+  handleRemoveButtonClicked(id) {
+    this.setState({ images: this.state.images.filter((img) => img.id !== id) })
   }
 
   async handleStickerizeButtonClicked() {
     this.state.images.forEach(img => URL.revokeObjectURL(img.url))
 
     this.setState({
-      finalFile: await this.service.stickerizeAll(this.state.images)
+      finalFile: await this.service.stickerizeAll(this.state.images),
     })
   }
 
@@ -54,14 +58,14 @@ class ImageList extends React.Component {
         <h3>YOUR IMAGES</h3>
         <div className="imageList">
           {this.state.images.map((img, index) => (
-            <div className="image">
+            <div className="image" key={img.id}>
+              <i
+                className="image-remove-icon"
+                onClick={() => this.handleRemoveButtonClicked(img.id)}
+              />
               <img src={img.src} alt={img.name} />
               <div className="devider-vertical" />
               <span className="image-name">{img.name}</span>
-              {/* <div
-                className="image-remove-icon"
-                onClick={() => this.handleRemoveButtonClicked(index)}
-              /> */}
             </div>
           ))}
         </div>
