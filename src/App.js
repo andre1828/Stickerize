@@ -24,6 +24,16 @@ class App extends React.Component {
             <div className="picture-icon" />
             <p>SELECT IMAGES</p>
           </label>
+          <input
+            id={"imageInput"}
+            type="file"
+            multiple={true}
+            accept={"image/jpeg,image/png,image/gif"}
+            onChange={e => this.handleFilePickerChanged(e.target.files)}
+            style={{
+              visibility: "hidden"
+            }}
+          />
         </section>
         <div className="devider" />
         <section className="feature-container">
@@ -36,16 +46,6 @@ class App extends React.Component {
             <p>No downloads, choose your images and get going right away</p>
           </div>
         </section>
-        <input
-          id={"imageInput"}
-          type="file"
-          multiple={true}
-          accept={"image/jpeg,image/png,image/gif"}
-          onChange={e => this.handleFilePickerChanged(e.target.files)}
-          style={{
-            visibility: "hidden"
-          }}
-        />
         <footer>
           <div>
             Icons made by
