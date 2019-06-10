@@ -1,3 +1,68 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.home-icon::before {
+  font-family: Flaticon;
+  content: "\f18e";
+  color: #8e8b93;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.add-image-icon::before {
+  font-family: Flaticon;
+  content: "\f100";
+  color: #8e8b93;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.imageList {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
+}
+
+.imageList .image {
+  display: flex;
+  height: 160px;
+  width: 98%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.image-remove-icon::before {
+  font-family: Flaticon;
+  content: "\f1c5";
+  color: #8e8b93;
+  font-style: normal;
+}
+
+.imageList .image img {
+  width: 165px;
+  max-height: 93px;
+}
+
+.devider-vertical {
+  height: 120px;
+  background-color: #c4bdce;
+  width: 1px;
+}
+
+.image-name {
+  padding-top: 36px;
+  width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  align-self: baseline;
+}
+
 .stickerize-button {
   width: 100%;
   background: #6634c5;
