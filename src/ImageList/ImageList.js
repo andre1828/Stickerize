@@ -57,10 +57,13 @@ class ImageList extends React.Component {
       <React.Fragment>
         <div className="header">
           <Link to="/">
-          <i className="home-icon" />
+            <i className="home-icon" />
           </Link>
           <h3>YOUR IMAGES</h3>
-          <i className="add-image-icon" onClick={this.handleAddImageButtonClicked}/>
+          <i
+            className="add-image-icon"
+            onClick={this.handleAddImageButtonClicked}
+          />
         </div>
         <div className="imageList">
           {this.state.images.map((img, index) => (
