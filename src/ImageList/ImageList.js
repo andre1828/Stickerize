@@ -52,6 +52,10 @@ class ImageList extends React.Component {
     })
   }
 
+  handleAddImageButtonClicked() {
+    console.log("Select more images")
+  }
+
   render() {
     return (
       <React.Fragment>
