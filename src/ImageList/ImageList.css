@@ -12,6 +12,9 @@
   font-weight: bold;
 }
 
+.add-image-icon {
+  cursor: pointer;
+}
 .add-image-icon::before {
   font-family: Flaticon;
   content: "\f100";
