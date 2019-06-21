@@ -52,8 +52,21 @@ class ImageList extends React.Component {
     })
   }
 
-  handleAddImageButtonClicked() {
-    console.log("Select more images")
+  async handleAddImageButtonClicked(files) {
+    console.log(files)
+    let images = []
+    for (let i = 0; i < files.length; i++) {
+      let blob = await new Response(files[i]).blob()
+      images.push({
+        id: null,
+        name: files[i].name,
+        src: URL.createObjectURL(blob),
+        blob: blob
+      })
+    }
+    images.forEach(img => (img.id = uuidv1()))
+
+    this.setState({ images: this.state.images.concat(images) })
   }
 
   render() {
@@ -64,9 +77,21 @@ class ImageList extends React.Component {
             <i className="home-icon" />
           </Link>
           <h3>YOUR IMAGES</h3>
-          <i
-            className="add-image-icon"
-            onClick={this.handleAddImageButtonClicked}
+          <label htmlFor="addImageInput">
+            <i
+              className="add-image-icon"
+              onClick={this.handleAddImageButtonClicked}
+            />
+          </label>
+          <input
+            id="addImageInput"
+            type="file"
+            multiple={true}
+            accept={"image/jpeg,image/png,image/gif"}
+            onChange={e => this.handleAddImageButtonClicked(e.target.files)}
+            style={{
+              display: "none"
+            }}
           />
         </div>
         <div className="imageList">
