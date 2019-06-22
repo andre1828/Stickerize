@@ -1,5 +1,5 @@
 body {
-  background-color: #d9cbef80;
+  background-color: #dfd7ec;
   animation: 0.3s ease-in fade-in;
 }
 @keyframes fade-in {
@@ -23,7 +23,7 @@ label[for="imageInput"] {
   width: 80%;
   max-width: 256px;
   height: 230px;
-  background-color: #500fcccc;
+  background-color: #7636db;
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -39,7 +39,7 @@ label[for="imageInput"]:hover {
 }
 
 .picture-icon {
-  color: #e4d3f3cc;
+  color: #c5aaf2; 
   font-size: 7em;
   margin-left: 0px;
 }
@@ -51,7 +51,7 @@ label[for="imageInput"]:hover {
 
 /*select imagens button text*/
 label[for="imageInput"] p {
-  color: #e4d3f3cc;
+  color: #c5aaf2;
   font-weight: bold;
   position: relative;
   bottom: 66px;
