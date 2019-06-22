@@ -35,7 +35,7 @@ label[for="imageInput"] {
 }
 
 label[for="imageInput"]:hover {
-  box-shadow: 0 10px 30px -10px #440ab1b3;
+  box-shadow: 0 10px 30px -10px #7636db;
 }
 
 .picture-icon {
