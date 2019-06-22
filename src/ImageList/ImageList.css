@@ -69,7 +69,9 @@
 .stickerize-button {
   width: 100%;
   background: #6634c5;
-  height: 50px;
+  color: #c5aaf2;
+  font-size: large;
+  height: 68px;
   position: fixed;
   bottom: 0;
   border-style: none;
