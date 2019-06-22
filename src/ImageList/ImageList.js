@@ -52,7 +52,7 @@ class ImageList extends React.Component {
     })
   }
 
-  async handleAddImageButtonClicked(files) {
+  handleAddImageButtonClicked = async files => {
     console.log(files)
     let images = []
     for (let i = 0; i < files.length; i++) {
