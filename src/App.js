@@ -17,7 +17,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <h3>STICKERIZE</h3>
         <section className="main-section">
           <label htmlFor="imageInput">
