@@ -43,13 +43,13 @@ body {
   box-shadow: 0 10px 30px -10px var(--primary-color);
 }
 
-.picture-icon {
+.pictureIcon {
   color: var(--accent-color); 
   font-size: 7em;
   margin-left: 0px;
 }
 
-.picture-icon::before {
+.pictureIcon::before {
   font-family: Flaticon;
   content: "\f1ec";
 }
@@ -69,7 +69,7 @@ body {
   margin: 70px auto 10px auto;
 }
 
-.feature-container {
+.featureContainer {
   display: flex;
   flex-direction: column;
 }
@@ -82,7 +82,7 @@ body {
   text-align: center;
 }
 
-.feature-icon {
+.featureIcon {
   font-size: 5em;
 }
 
@@ -91,7 +91,7 @@ body {
   content: "\f1a2";
 }
 
-.stop-watch-4::before {
+.stopWatch4::before {
   font-family: Flaticon;
   content: "\f240";
 }
