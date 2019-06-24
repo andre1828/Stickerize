@@ -1,5 +1,5 @@
 import React from "react"
-import "./App.css"
+import styles from "./App.module.css"
 import "./flaticon.css"
 
 class App extends React.Component {
@@ -18,11 +18,11 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h3 className="title">STICKERIZE</h3>
-        <section className="main-section">
-          <label htmlFor="imageInput" className="selectImagesButton">
-            <div className="picture-icon" />
-            <p className="selectImagesButtonText">SELECT IMAGES</p>
+        <h3 className={styles.title}>STICKERIZE</h3>
+        <section className="mainSection">
+          <label htmlFor="imageInput" className={styles.selectImagesButton}>
+            <div className={styles.pictureIcon} />
+            <p className={styles.selectImagesButtonText}>SELECT IMAGES</p>
           </label>
           <input
             id={"imageInput"}
@@ -35,32 +35,32 @@ class App extends React.Component {
             }}
           />
         </section>
-        <div className="devider" />
-        <section className="feature-container">
-          <div className="feature">
-            <div className="feature-icon layers" />
+        <div className={styles.devider} />
+        <section className={styles.featureContainer}>
+          <div className={styles.feature}>
+            <div className={`${styles.featureIcon} ${styles.layers}`} />
             <p>Process hundreds of images at once</p>
           </div>
-          <div className="feature">
-            <div className="feature-icon stop-watch-4" />
+          <div className={styles.feature}>
+            <div className={`${styles.featureIcon} ${styles.stopWatch4}`} />
             <p>No downloads, choose your images and get going right away</p>
           </div>
         </section>
-        <footer className="footer">
+        <footer className={styles.footer}>
           <div>
             Icons made by
-            <a className="footerLink"
+            <a className={styles.footerLink}
               href="https://www.flaticon.com/authors/smashicons"
               title="Smashicons"
             >
               Smashicons
             </a>
             from
-            <a className="footerLink" href="https://www.flaticon.com/" title="Flaticon">
+            <a className={styles.footerLink} href="https://www.flaticon.com/" title="Flaticon">
               www.flaticon.com
             </a>
             is licensed by
-            <a className="footerLink"
+            <a className={styles.footerLink}
               href="http://creativecommons.org/licenses/by/3.0/"
               title="Creative Commons BY 3.0"
               target="_blank"
