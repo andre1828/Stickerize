@@ -18,11 +18,11 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h3>STICKERIZE</h3>
+        <h3 className="title">STICKERIZE</h3>
         <section className="main-section">
-          <label htmlFor="imageInput">
+          <label htmlFor="imageInput" className="selectImagesButton">
             <div className="picture-icon" />
-            <p>SELECT IMAGES</p>
+            <p className="selectImagesButtonText">SELECT IMAGES</p>
           </label>
           <input
             id={"imageInput"}
@@ -46,21 +46,21 @@ class App extends React.Component {
             <p>No downloads, choose your images and get going right away</p>
           </div>
         </section>
-        <footer>
+        <footer className="footer">
           <div>
             Icons made by
-            <a
+            <a className="footerLink"
               href="https://www.flaticon.com/authors/smashicons"
               title="Smashicons"
             >
               Smashicons
             </a>
             from
-            <a href="https://www.flaticon.com/" title="Flaticon">
+            <a className="footerLink" href="https://www.flaticon.com/" title="Flaticon">
               www.flaticon.com
             </a>
             is licensed by
-            <a
+            <a className="footerLink"
               href="http://creativecommons.org/licenses/by/3.0/"
               title="Creative Commons BY 3.0"
               target="_blank"

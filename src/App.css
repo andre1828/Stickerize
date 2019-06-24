@@ -16,14 +16,14 @@ body {
   }
 }
 /*Title*/
-h3 {
+.title {
   text-align: center;
   font-weight: 900;
   font-size: x-large;
 }
 
 /*Select images button*/
-label[for="imageInput"] {
+.selectImagesButton {
   display: block;
   width: 80%;
   max-width: 256px;
@@ -39,7 +39,7 @@ label[for="imageInput"] {
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
-label[for="imageInput"]:hover {
+.selectImagesButton:hover {
   box-shadow: 0 10px 30px -10px var(--primary-color);
 }
 
@@ -55,7 +55,7 @@ label[for="imageInput"]:hover {
 }
 
 /*select imagens button text*/
-label[for="imageInput"] p {
+.selectImagesButtonText {
   color: var(--accent-color);
   font-weight: bold;
   position: relative;
@@ -96,12 +96,12 @@ label[for="imageInput"] p {
   content: "\f240";
 }
 
-footer {
+.footer {
   text-align: center;
   font-weight: lighter;
 }
 
-footer a {
+.footerLink {
   color: var(--primary-color);
   text-decoration: none;
 }
