@@ -70,10 +70,6 @@ class App extends React.Component {
             </a>
           </div>
         </footer>
-        {/* <button onClick={() => this.stickerizeAll()}>Stickerize</button>
-        <button onClick={() => this.handleDownloadButtonClicked()}>
-          Download
-        </button> */}
       </div>
     )
   }
