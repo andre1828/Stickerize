@@ -35,6 +35,12 @@ class App extends React.Component {
             }}
           />
         </section>
+        <section>
+          <p>
+            Stickerize is the easy way to process hundreds of images to conform
+            with the Sticker bot in Telegram
+          </p>
+        </section>
         <div className={styles.devider} />
         <section className={styles.featureContainer}>
           <div className={styles.feature}>
@@ -49,18 +55,24 @@ class App extends React.Component {
         <footer className={styles.footer}>
           <div>
             Icons made by
-            <a className={styles.footerLink}
+            <a
+              className={styles.footerLink}
               href="https://www.flaticon.com/authors/smashicons"
               title="Smashicons"
             >
               Smashicons
             </a>
             from
-            <a className={styles.footerLink} href="https://www.flaticon.com/" title="Flaticon">
+            <a
+              className={styles.footerLink}
+              href="https://www.flaticon.com/"
+              title="Flaticon"
+            >
               www.flaticon.com
             </a>
             is licensed by
-            <a className={styles.footerLink}
+            <a
+              className={styles.footerLink}
               href="http://creativecommons.org/licenses/by/3.0/"
               title="Creative Commons BY 3.0"
               target="_blank"
