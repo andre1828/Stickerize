@@ -31,7 +31,7 @@ class App extends React.Component {
             accept={"image/jpeg,image/png,image/gif"}
             onChange={e => this.handleFilePickerChanged(e.target.files)}
             style={{
-              visibility: "hidden"
+              display: "none"
             }}
           />
         </section>
