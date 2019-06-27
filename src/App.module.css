@@ -65,9 +65,11 @@ body {
 .description {
   text-align: center;
   font-size: x-large;
-  color: #855dc4;
-  font-style: oblique;
+  font-family: "Open Sans", sans-serif;
   padding: 3% 0%;
+  width:48%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .devider {
