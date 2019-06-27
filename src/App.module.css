@@ -44,7 +44,7 @@ body {
 }
 
 .pictureIcon {
-  color: var(--accent-color); 
+  color: var(--accent-color);
   font-size: 7em;
   margin-left: 0px;
 }
@@ -62,11 +62,19 @@ body {
   bottom: 66px;
 }
 
+.description {
+  text-align: center;
+  font-size: x-large;
+  color: #855dc4;
+  font-style: oblique;
+  padding: 3% 0%;
+}
+
 .devider {
   background-color: #c6c6c6;
   height: 1px;
   width: 80%;
-  margin: 70px auto 10px auto;
+  margin: 0px auto;
 }
 
 .featureContainer {

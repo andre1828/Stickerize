@@ -35,7 +35,7 @@ class App extends React.Component {
             }}
           />
         </section>
-        <section>
+        <section className={styles.description}>
           <p>
             Stickerize is the easy way to process hundreds of images to conform
             with the Sticker bot in Telegram
