@@ -1,0 +1,18 @@
+:root {
+  --primary-color: #7636db;
+  --accent-color: #cfbded;
+}
+
+body {
+  background-color: #dfd7ec;
+  animation: 0.3s ease-in fade-in;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
