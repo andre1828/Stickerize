@@ -1,5 +1,6 @@
 import React from "react"
 import styles from "./App.module.css"
+import "./styles.module.css"
 import "./flaticon.css"
 
 class App extends React.Component {
