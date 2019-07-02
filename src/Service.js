@@ -26,8 +26,6 @@ export default class Service {
 
     var result = ""
     if (stickerizedImages.length > 1) {
-      // zip
-      // render download btn
       var imagesZip = new JSZip()
       for (let i = 0; i < images.length; i++) {
         imagesZip.file(images[i].name, stickerizedImages[i])
